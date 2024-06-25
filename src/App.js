@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Register from './components/Register';
+import Login from './components/Login';
+import PolicyDashboard from './components/PolicyDashboard';
 
-function App() {
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:47417745.
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/register' component={Register} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/policies' component={PolicyDashboard} />
+      </Routes>
+    </Router>
   );
 }
 
