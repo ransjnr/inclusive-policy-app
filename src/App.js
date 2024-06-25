@@ -6,7 +6,6 @@ import Register from './components/Register';
 import Login from './components/Login';
 import PolicyDashboard from './components/PolicyDashboard';
 
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:47417745.
 const App = () => {
   return (
     <Router>
