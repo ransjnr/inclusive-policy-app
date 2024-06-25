@@ -3,9 +3,7 @@ import axios from 'axios';
 
 function Register() {
   const [formData, setFormData] = useState({ username: '', email: '', password: '' });
-
   const { username, email, password } = formData;
-
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = async e => {
@@ -17,7 +15,6 @@ function Register() {
       console.error(err.response.data);
     }
   };
-
   return (
     <div>
       <h1>Register</h1>
